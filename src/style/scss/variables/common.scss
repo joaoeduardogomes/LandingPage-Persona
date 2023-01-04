@@ -1,0 +1,151 @@
+// Importação das fontes locais:
+@font-face {
+    font-family: 'Persona3';
+    src: url('../../../fonts/P3.TTF');
+}
+
+@font-face {
+    font-family: 'Persona4';
+    src: url('../../../fonts/P4.ttf');
+}
+
+@font-face {
+    font-family: 'Persona5';
+    src: url('../../../fonts/p5hatty.ttf');
+}
+
+// Importação do google fonts:
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$fonte-p3: 'Persona3', sans-serif;
+$fonte-p4: 'Persona4', sans-serif;
+$fonte-P5: 'Persona5', sans-serif;
+$fonte-padrao: 'Roboto', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-family: $fonte-padrao;
+}
+
+div.container {
+    width: 100vw;
+    //max-width: 412px;
+    //min-height: 446px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    border: 2px solid $primary-color;
+
+    aside.side-menu {
+    display: block;
+    width: calc(95rem/8);
+    min-width: 70px;
+    background-color: $primary-color;
+            //mudando o estilo da casinha (e dos demais ícones que forem importados):
+            .material-symbols-rounded {
+                font-variation-settings:
+                    'FILL' 1,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+            }
+            .home-icon {
+                display: block;
+                background-color: $secondary-color;
+                text-align: center;
+                font-size: 6rem;
+                padding-top: 2.3rem;
+                width: 100%;
+                height: 12rem;
+            }
+
+            nav {
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4rem;
+                padding-top: 4rem;
+
+                a {
+                    display: block;
+                }
+
+                img.logo {
+                    width: calc(64rem/8);
+                    height: calc(46rem/8);
+                }
+                img.p3-logo {
+                    background-color: $p3-color;
+                }
+                img.p4-logo {
+                    background-color: $p4-color;
+                }
+                img.p5-logo {
+                    background-color: $p5-color;
+                }
+            }
+        }
+
+    main {
+        width: auto;
+
+        header {
+            height: 12rem;
+            border-bottom: 2px solid $primary-color;
+            border-left: 2px solid $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-width: 30rem;
+            }
+        }
+
+        article {
+            p {
+                margin: 3rem;
+                font-family: $fonte-padrao;
+                font-size: 2rem;
+            }
+            
+            section#select {
+                max-width: fit-content;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border: 1px solid $primary-color;
+                margin: auto;
+    
+                img {
+                    max-height: calc(120rem/8);
+                    //position: absolute;
+                }
+    
+                // img#p3-protagonist {
+                //     left: 18%;
+                // }
+                // img#p4-protagonist {
+                //     left: 30%;
+                // }
+                // img#p5-protagonist {
+                //     left: 50%;
+                // }
+            }
+        }
+    }
+}
