@@ -110,42 +110,60 @@ div.container main article section#select img {
   max-height: 15rem;
 }
 
-main header {
+main header.header {
   width: 100%;
+  height: 50rem;
   padding: 1rem;
   background-color: #050505;
 }
-main header nav {
+main header.header nav {
   width: 100%;
 }
-main header nav ul {
+main header.header nav ul {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
 }
-main header nav ul li.profile {
+main header.header nav ul li.profile {
   width: min-content;
 }
-main header nav ul li.profile img.profile-img {
+main header.header nav ul li.profile img.profile-img {
   width: 5rem;
 }
-main header nav ul li.profile p.profile-name {
+main header.header nav ul li.profile p.profile-name {
   color: #fff;
   text-align: center;
   font-size: 1rem;
 }
-main header nav ul li.profile p.male-protagonist, main header nav ul li.profile p.female-protagonist {
+main header.header nav ul li.profile p.male-protagonist, main header.header nav ul li.profile p.female-protagonist {
   margin-top: -0.3rem;
 }
-main header nav ul li.profile p.male-protagonist::after {
+main header.header nav ul li.profile p.male-protagonist::after {
   content: "♂";
   font-size: 1.3rem;
 }
-main header nav ul li.profile p.female-protagonist::after {
+main header.header nav ul li.profile p.female-protagonist::after {
   content: "♀";
   font-size: 1.3rem;
+}
+main header.header article p {
+  margin: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+main header.header article section#select {
+  max-width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #050505;
+  margin: auto;
+}
+main header.header article section#select img {
+  max-height: 15rem;
 }
 
 .escondido {
