@@ -41,10 +41,14 @@ div.container {
 }
 div.container aside.side-menu {
   display: block;
-  width: 11.875rem;
+  max-width: 11.875rem;
   min-width: 70px;
   background-color: #050505;
   border-right: 2px solid #050505;
+}
+div.container aside.side-menu a.link-home {
+  text-decoration: none;
+  color: inherit;
 }
 div.container aside.side-menu .material-symbols-rounded {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -95,7 +99,7 @@ div.container main header {
   align-items: center;
   justify-content: center;
 }
-div.container main header img {
+div.container main header img#persona-series-logo {
   max-width: 30rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -115,6 +119,25 @@ div.container main article section#select {
 }
 div.container main article section#select img {
   max-height: 15rem;
+}
+
+main header {
+  width: 100%;
+  padding: 1rem;
+  background-color: #050505;
+}
+main header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main header nav span.profile img.profile-img {
+  width: 5rem;
+}
+main header nav span.profile p.profile-name {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
