@@ -1,25 +1,7 @@
-// Importação das fontes locais:
-@font-face {
-    font-family: 'Persona3';
-    src: url('../../../fonts/P3.TTF');
-}
-
-@font-face {
-    font-family: 'Persona4';
-    src: url('../../../fonts/P4.ttf');
-}
-
-@font-face {
-    font-family: 'Persona5';
-    src: url('../../../fonts/p5hatty.ttf');
-}
-
 // Importação do google fonts:
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$fonte-p3: 'Persona3', sans-serif;
-$fonte-p4: 'Persona4', sans-serif;
-$fonte-P5: 'Persona5', sans-serif;
+
 $fonte-padrao: 'Roboto', sans-serif;
 
 $altura-cima: 12rem;
