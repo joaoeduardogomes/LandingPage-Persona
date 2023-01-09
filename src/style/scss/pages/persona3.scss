@@ -102,25 +102,45 @@ main {
             }
         }
 
-        article {
+    }
+
+    article {
+        padding: 1.2rem 3rem;
+        text-align: left;
+
+        section.text {
             p {
-                margin: 3rem;
-                font-family: $fonte-padrao;
-                font-size: 2rem;
+                    margin: 2rem 0;
+                    font-family: $fonte-padrao;
+                    font-size: 1.2rem;
+                    text-indent: 1.5rem;
             }
-            
-            section#select {
-                max-width: fit-content;
-                height: fit-content;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                border: 1px solid $primary-color;
-                margin: auto;
-    
-                img {
-                    max-height: calc(120rem/8);
+        }
+        
+        
+        section.data {
+            display: flex;
+            justify-content: space-evenly;
+
+            table {
+                border-collapse: collapse;
+
+                col.cinfo {
+                    background-color: $p3-color;
                 }
+
+                th, td {
+                    border: 1px solid black;
+                    padding: 8px;
+                }
+
+                th {
+                    text-align: center;
+                }
+            }
+
+            img {
+                max-height: calc(120rem/8);
             }
         }
     }

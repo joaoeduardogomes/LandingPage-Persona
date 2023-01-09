@@ -114,11 +114,24 @@ div.container {
             }
         }
 
-        article {
+        article#home-article {
+            padding: 0;
+            
             p {
                 margin: 3rem;
                 font-family: $fonte-padrao;
                 font-size: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(6, 113, 175);
+                    transition: all 6s ease-in-out;   
+
+                    &:hover {
+                        color:rgb(2, 74, 116);
+                        border-bottom: 1px solid rgb(2, 74, 116);
+                    }
+                }
             }
             
             section#select {
@@ -127,7 +140,7 @@ div.container {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                border: 1px solid $primary-color;
+                border: 1px solid rgba(0, 0, 0, 0.336);
                 margin: auto;
     
                 img {
