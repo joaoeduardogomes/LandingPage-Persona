@@ -80,6 +80,11 @@ div.container {
                 img.logo {
                     width: calc(64rem/8);
                     height: calc(46rem/8);
+
+                    box-shadow: 2px 2px 0px 0px #899599;
+                    border-radius:5px;
+                    border:1px solid #d6bcd6;
+                    cursor:pointer;
                 }
                 img.p3-logo {
                     background-color: $p3-color;

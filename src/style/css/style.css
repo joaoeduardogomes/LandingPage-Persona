@@ -70,6 +70,10 @@ div.container aside.side-menu nav a {
 div.container aside.side-menu nav img.logo {
   width: 8rem;
   height: 5.75rem;
+  box-shadow: 2px 2px 0px 0px #899599;
+  border-radius: 5px;
+  border: 1px solid #d6bcd6;
+  cursor: pointer;
 }
 div.container aside.side-menu nav img.p3-logo {
   background-color: #D5E7F2;
@@ -124,40 +128,46 @@ main header.container {
 }
 main header.container .arrow-left, main header.container .arrow-right {
   position: absolute;
-  top: 0;
+  top: 25%;
   left: 0;
   right: auto;
   bottom: 0;
   font-size: 20px;
-  line-height: 80px;
   width: 40px;
+  height: 40px;
   text-align: center;
   color: #fff;
   cursor: pointer;
   border: none;
-  background: linear-gradient(to left, transparent 0%, black 200%);
-  text-align: left;
+  background: radial-gradient(transparent 0%, rgb(194, 194, 194) 200%);
   opacity: 0.5;
   transition: all 500ms ease-in-out;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+main header.container .arrow-left {
+  margin-left: 2rem;
 }
 main header.container .arrow-right {
   left: auto;
   right: 0;
-  text-align: right;
-  background: linear-gradient(to right, transparent 0%, black 200%);
+  background: radial-gradient(transparent 0%, rgb(163, 163, 163) 200%);
+  margin-right: 2rem;
 }
 main header.container .arrow-left:hover, main header.container .arrow-right:hover {
   opacity: 1;
 }
 main header.container nav.gallery-wrapper {
-  width: 100%;
+  width: 60%;
   overflow-x: auto; /* faz o scroll lateral ser no elemento, não no body todo da página. Se ele for maior do que o elemento-pai (container), haverá scroll */
 }
 main header.container nav.gallery-wrapper ul {
   width: 100%;
   display: flex;
   flex-flow: row nowrap; /* flexdirection + flex-wrap */
-  gap: 15px;
+  gap: 1rem;
 }
 main header.container nav.gallery-wrapper ul li.item {
   width: min-content;
