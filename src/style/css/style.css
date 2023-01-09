@@ -21,6 +21,8 @@ body {
 
 div.container {
   width: 100vw;
+  max-width: 600px;
+  margin: 0 auto;
   min-height: 100vh;
   height: 100%;
   display: flex;
@@ -79,7 +81,7 @@ div.container aside.side-menu nav img.p5-logo {
   background-color: #D92323;
 }
 div.container main {
-  width: auto;
+  max-width: calc(100% - 70px);
 }
 div.container main header {
   height: 12rem;
@@ -110,50 +112,88 @@ div.container main article section#select img {
   max-height: 15rem;
 }
 
-main header.header {
+main header.container {
+  display: block;
   width: 100%;
-  height: 50rem;
   padding: 1rem;
   background-color: #050505;
+  position: relative;
+  padding: 15px;
+  max-width: 640px;
+  margin: 0 auto;
 }
-main header.header nav {
+main header.container .arrow-left, main header.container .arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 80px;
+  width: 40px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  text-align: left;
+  opacity: 0.5;
+  transition: all 500ms ease-in-out;
+}
+main header.container .arrow-right {
+  left: auto;
+  right: 0;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
+main header.container .arrow-left:hover, main header.container .arrow-right:hover {
+  opacity: 1;
+}
+main header.container nav.gallery-wrapper {
   width: 100%;
+  overflow-x: auto; /* faz o scroll lateral ser no elemento, não no body todo da página. Se ele for maior do que o elemento-pai (container), haverá scroll */
 }
-main header.header nav ul {
+main header.container nav.gallery-wrapper ul {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-flow: row nowrap; /* flexdirection + flex-wrap */
+  gap: 15px;
 }
-main header.header nav ul li.profile {
+main header.container nav.gallery-wrapper ul li.item {
   width: min-content;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: all 500ms ease-in-out;
+  list-style-type: none;
 }
-main header.header nav ul li.profile img.profile-img {
+main header.container nav.gallery-wrapper ul li.item img.profile-img {
   width: 5rem;
 }
-main header.header nav ul li.profile p.profile-name {
+main header.container nav.gallery-wrapper ul li.item p.profile-name {
   color: #fff;
   text-align: center;
   font-size: 1rem;
 }
-main header.header nav ul li.profile p.male-protagonist, main header.header nav ul li.profile p.female-protagonist {
+main header.container nav.gallery-wrapper ul li.item p.male-protagonist, main header.container nav.gallery-wrapper ul li.item p.female-protagonist {
   margin-top: -0.3rem;
 }
-main header.header nav ul li.profile p.male-protagonist::after {
+main header.container nav.gallery-wrapper ul li.item p.male-protagonist::after {
   content: "♂";
   font-size: 1.3rem;
 }
-main header.header nav ul li.profile p.female-protagonist::after {
+main header.container nav.gallery-wrapper ul li.item p.female-protagonist::after {
   content: "♀";
   font-size: 1.3rem;
 }
-main header.header article p {
+main header.container nav.gallery-wrapper ul li.current-item { /* O item que estiver selecionado */
+  opacity: 1;
+}
+main header.container article p {
   margin: 3rem;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
 }
-main header.header article section#select {
+main header.container article section#select {
   max-width: fit-content;
   height: fit-content;
   display: flex;
@@ -162,12 +202,28 @@ main header.header article section#select {
   border: 1px solid #050505;
   margin: auto;
 }
-main header.header article section#select img {
+main header.container article section#select img {
   max-height: 15rem;
 }
 
 .escondido {
   display: none;
+}
+
+/* This is from w3schools */
+/* 
+https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /*# sourceMappingURL=style.css.map */

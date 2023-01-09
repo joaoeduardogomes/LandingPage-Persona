@@ -22,7 +22,8 @@ body {
 
 div.container {
     width: 100vw;
-    //max-width: 412px;
+    max-width: 600px;
+    margin: 0 auto;
     //min-height: 446px;
     min-height: 100vh;
     height: 100%;
@@ -93,7 +94,7 @@ div.container {
         }
 
     main {
-        width: auto;
+        max-width: calc(100% - 70px);
 
         header {
             height: $altura-cima;
