@@ -1,8 +1,33 @@
+function removeCurrentitem(items) {
+    items.forEach(item => item.classList.remove('current-item'));
+}
+
+function positionItem(items) {
+    items[currentItem].scrollIntoView({
+        inline: "center", // posiciona no centro
+        behavior: "smooth" // dá aquele efeito suave de scroll do carrossel
+    })
+}
+
+function addCurrentItem(items) {
+    items[currentItem].classList.add('current-item');
+}
+
+function addIndexValue(items) {
+    for(i = 0; i < items.length; i++) {
+        items[i].dataset.indexValue = i;
+        console.log(items[i].dataset.indexValue);
+    }
+}
+
+
 const controls = document.querySelectorAll('.control');
 
 let currentItem = 0;
 const items = document.querySelectorAll('.item');
 const maxItems = items.length;
+
+addIndexValue(items);
 
 controls.forEach(control => {
     control.addEventListener('click', () => {
@@ -30,36 +55,34 @@ controls.forEach(control => {
 
 
         // remove a classe de item selecionado de todos:
-        items.forEach(item => item.classList.remove('current-item'));
+        removeCurrentitem(items);
 
         // posiciona o item do índice atual no centro do elemento:
-        items[currentItem].scrollIntoView({
-            inline: "center", // posiciona no centro
-            behavior: "smooth" // dá aquele efeito suave de scroll do carrossel
-        })
+        positionItem(items);
 
         // Adiciona a classe de item selecionado ao índice atual, tornando o elemento mais visível:
-        items[currentItem].classList.add('current-item');
+        addCurrentItem(items);
+
         
         console.log(`Selecionado: ${items[currentItem].id}`)
+        console.log(` current item é: ${currentItem}`)
     });
 });
 
 // Pegando por clique:
-// console.log(items);
-// items.forEach(item => {
-//     item.addEventListener('click', () => {
-//         console.log(item.id)
-        
-//         items.forEach(item => item.classList.remove('current-item'));
+//console.log(items);
+/*
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        currentItem = item.dataset.indexValue;
 
-//         item.scrollIntoView({
-//             inline: "center", // posiciona no centro
-//             behavior: "smooth" // dá aquele efeito suave de scroll do carrossel
-//         })
+        removeCurrentitem(items);
+        positionItem(items);
+        addCurrentItem(items);
 
-//         item.classList.add('current-item');
-
-//         console.log(`Selecionado: ${item.id}`)
-//     })
-// })
+        console.log(`O índice é: ${item.dataset.indexValue}`);
+        console.log(`Selecionado: ${item.id}`)
+        console.log(`O current item é: ${currentItem}`)
+    })
+})
+*/

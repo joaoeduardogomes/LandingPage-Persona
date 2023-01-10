@@ -5,6 +5,7 @@
 $fonte-padrao: 'Roboto', sans-serif;
 
 $altura-cima: 12rem;
+$width-sidebar: 70px;
 
 * {
     margin: 0;
@@ -36,7 +37,7 @@ div.container {
     aside.side-menu {
     display: block;
     max-width: calc(95rem/8);
-    min-width: 70px;
+    min-width: $width-sidebar;
     background-color: $primary-color;
     border-right: 2px solid $primary-color;
         a.link-home{
@@ -99,7 +100,7 @@ div.container {
         }
 
     main {
-        max-width: calc(100% - 70px);
+        max-width: calc(100% - $width-sidebar);
 
         header {
             height: $altura-cima;

@@ -222,10 +222,15 @@ main article section.text p {
 }
 main article section.data {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 main article section.data table {
   border-collapse: collapse;
+  display: block;
+  width: 20rem;
 }
 main article section.data table col.cinfo {
   background-color: #D5E7F2;
@@ -233,12 +238,14 @@ main article section.data table col.cinfo {
 main article section.data table th, main article section.data table td {
   border: 1px solid black;
   padding: 8px;
+  font-size: 1.1rem;
 }
 main article section.data table th {
   text-align: center;
 }
 main article section.data img {
-  max-height: 15rem;
+  max-height: 200px;
+  max-width: 80px;
 }
 
 .escondido {
