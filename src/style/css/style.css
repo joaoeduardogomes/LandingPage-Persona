@@ -134,7 +134,7 @@ main header.container {
   padding: 1rem;
   background-color: #050505;
   position: relative;
-  padding: 15px;
+  padding: 2rem;
   max-width: 640px;
   margin: 0 auto;
 }
@@ -172,21 +172,23 @@ main header.container .arrow-left:hover, main header.container .arrow-right:hove
   opacity: 1;
 }
 main header.container nav.gallery-wrapper {
-  width: 60%;
+  width: 70%;
+  height: 100%;
   overflow-x: auto; /* faz o scroll lateral ser no elemento, não no body todo da página. Se ele for maior do que o elemento-pai (container), haverá scroll */
 }
 main header.container nav.gallery-wrapper ul {
   width: 100%;
   display: flex;
   flex-flow: row nowrap; /* flexdirection + flex-wrap */
+  align-items: stretch;
   gap: 1rem;
 }
 main header.container nav.gallery-wrapper ul li.item {
-  width: min-content;
+  width: 9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0.7rem;
   flex-shrink: 0;
   opacity: 0.6;
