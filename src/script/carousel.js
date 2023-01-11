@@ -20,12 +20,25 @@ function addIndexValue(items) {
     }
 }
 
+function hideData() {
+    info.forEach(charInfo => charInfo.classList.add('hide'));    
+}
+function showData() {
+    info[currentItem].classList.remove('hide');
+}
+
 
 const controls = document.querySelectorAll('.control');
 
 let currentItem = 0;
 const items = document.querySelectorAll('.item');
 const maxItems = items.length;
+
+// 
+const info = document.querySelectorAll('.info');
+console.log(info[0])
+hideData();
+showData();
 
 addIndexValue(items);
 
@@ -66,6 +79,12 @@ controls.forEach(control => {
         
         console.log(`Selecionado: ${items[currentItem].id}`)
         console.log(` current item é: ${currentItem}`)
+
+        hideData();
+        // Mostrar informações do personagem selecionado:
+        if(items[currentItem].classList.contains('current-item')) {
+            showData();
+        }
     });
 });
 

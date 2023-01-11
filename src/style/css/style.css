@@ -183,6 +183,11 @@ main header.container nav.gallery-wrapper ul {
 }
 main header.container nav.gallery-wrapper ul li.item {
   width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
   flex-shrink: 0;
   opacity: 0.6;
   transition: all 500ms ease-in-out;
@@ -190,11 +195,12 @@ main header.container nav.gallery-wrapper ul li.item {
 }
 main header.container nav.gallery-wrapper ul li.item img.profile-img {
   width: 5rem;
+  margin: 0 auto;
 }
 main header.container nav.gallery-wrapper ul li.item p.profile-name {
   color: #fff;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 main header.container nav.gallery-wrapper ul li.item p.male-protagonist, main header.container nav.gallery-wrapper ul li.item p.female-protagonist {
   margin-top: -0.3rem;
@@ -217,8 +223,10 @@ main article {
 main article section.text p {
   margin: 2rem 0;
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-indent: 1.5rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.125rem;
 }
 main article section.data {
   display: flex;
@@ -245,10 +253,10 @@ main article section.data table th {
 }
 main article section.data img {
   max-height: 200px;
-  max-width: 80px;
+  max-width: 200px;
 }
 
-.escondido {
+.hide {
   display: none;
 }
 
