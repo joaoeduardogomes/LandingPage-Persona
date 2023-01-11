@@ -287,5 +287,12 @@ https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 #persona4 table col.cinfo {
   background-color: #FFE52C;
 }
+#persona4 figure {
+  font-size: 1.3rem;
+  text-align: center;
+}
+#persona4 #kuma-data img {
+  height: 150px;
+}
 
 /*# sourceMappingURL=style.css.map */
