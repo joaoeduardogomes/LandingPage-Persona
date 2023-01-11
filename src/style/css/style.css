@@ -128,6 +128,12 @@ div.container main article#home-article section#select img {
   max-height: 15rem;
 }
 
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 main header.container {
   display: block;
   width: 100%;
@@ -255,7 +261,7 @@ main article section.data table th {
 }
 main article section.data img {
   max-height: 200px;
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .hide {
@@ -276,6 +282,10 @@ https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+#persona4 table col.cinfo {
+  background-color: #FFE52C;
 }
 
 /*# sourceMappingURL=style.css.map */
