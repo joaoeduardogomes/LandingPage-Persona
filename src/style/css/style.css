@@ -247,6 +247,7 @@ main article section.data table {
   border-collapse: collapse;
   display: block;
   width: 20rem;
+  flex-shrink: 1;
 }
 main article section.data table col.cinfo {
   background-color: #D5E7F2;
@@ -260,6 +261,7 @@ main article section.data table th {
   text-align: center;
 }
 main article section.data img {
+  flex-shrink: 3;
   max-height: 200px;
   max-width: 150px;
 }
@@ -293,6 +295,45 @@ https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 }
 #persona4 #kuma-data img {
   height: 150px;
+}
+
+body#persona5 header {
+  padding: 0;
+}
+body#persona5 header nav {
+  height: 100%;
+}
+body#persona5 header nav ul {
+  height: 100%;
+}
+body#persona5 header nav ul li.item {
+  filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.6));
+  width: 10rem;
+}
+body#persona5 header nav ul li.item p.profile-name {
+  color: #050505;
+  position: relative;
+  width: 68px;
+  height: 21.85px;
+  background: #FFFFFF;
+  transform: rotate(-4.37deg);
+  padding: 0.3rem;
+  font-weight: 500;
+}
+body#persona5 header nav ul li.item span.name-box {
+  position: absolute;
+  width: 72.43px;
+  height: 30.28px;
+  background: #000000;
+  transform: rotate(-3.69deg);
+  z-index: -1;
+  top: 62%;
+}
+body#persona5 table col.cinfo {
+  background-color: #D92323;
+}
+body#persona5 table th {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

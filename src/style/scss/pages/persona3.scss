@@ -140,6 +140,7 @@ main {
 
                 display: block;
                 width: 20rem;
+                flex-shrink: 1;
 
                 col.cinfo {
                     background-color: $p3-color;
@@ -157,6 +158,7 @@ main {
             }
 
             img {
+                flex-shrink: 3;
                 max-height: 200px;
                 max-width: 150px;
             }
