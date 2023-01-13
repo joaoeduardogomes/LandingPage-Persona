@@ -11,6 +11,7 @@ body#persona5 {
                 li.item {
                     filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.6));
                     width: 10rem;
+                    position: relative;
 
                     p.profile-name {
                         color: $primary-color;
