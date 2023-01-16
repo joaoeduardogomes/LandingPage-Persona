@@ -90,18 +90,17 @@ controls.forEach(control => {
 
 // Pegando por clique:
 //console.log(items);
-/*
+
 items.forEach(item => {
     item.addEventListener('click', () => {
-        currentItem = item.dataset.indexValue;
 
+        currentItem = item.dataset.indexValue;
         removeCurrentitem(items);
+        item.classList.add('current-item');
         positionItem(items);
-        addCurrentItem(items);
 
         console.log(`O índice é: ${item.dataset.indexValue}`);
         console.log(`Selecionado: ${item.id}`)
         console.log(`O current item é: ${currentItem}`)
     })
 })
-*/
