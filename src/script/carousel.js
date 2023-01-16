@@ -90,7 +90,7 @@ controls.forEach(control => {
 
 // Pegando por clique:
 //console.log(items);
-
+/*
 items.forEach(item => {
     item.addEventListener('click', () => {
 
@@ -104,3 +104,4 @@ items.forEach(item => {
         console.log(`O current item é: ${currentItem}`)
     })
 })
+*/
