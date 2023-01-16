@@ -54,4 +54,34 @@ body#persona5 {
             color: $secondary-color;
         }
     }
+
+    span.toggle{
+        cursor: pointer;
+        padding: 2rem;
+
+        &:hover {
+            box-shadow: 2px 3px 6px 5px rgba(0, 0, 0, 0.377);
+            border-radius: 10px;
+        }
+
+        p {
+            max-width: fit-content;
+            margin: auto;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            background-color: $p5-color;
+            color: $secondary-color;
+            font-weight: bold;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid $primary-color;
+        }
+
+        figure {
+        transition: display 3s ease-in-out;
+        }
+    }
+
+    
 }
