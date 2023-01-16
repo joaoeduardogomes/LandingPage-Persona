@@ -10,13 +10,14 @@ body#persona5 {
 
                 li.item {
                     filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.6));
-                    width: 10rem;
+                    width: 11rem;
                     position: relative;
 
                     p.profile-name {
                         color: $primary-color;
 
                         position: relative;
+                        min-width: fit-content;
                         width: 68px;
                         height: 21.85px;
                         background: #FFFFFF;

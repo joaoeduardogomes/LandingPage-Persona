@@ -109,7 +109,7 @@ div.container main article#home-article p {
 div.container main article#home-article p a {
   text-decoration: none;
   color: rgb(6, 113, 175);
-  transition: all 6s ease-in-out;
+  transition: border-bottom 6s ease-in-out;
 }
 div.container main article#home-article p a:hover {
   color: rgb(2, 74, 116);
@@ -134,7 +134,7 @@ h1 {
   text-align: center;
 }
 
-main header.container {
+main header.header {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -144,7 +144,7 @@ main header.container {
   max-width: 640px;
   margin: 0 auto;
 }
-main header.container .arrow-left, main header.container .arrow-right {
+main header.header .arrow-left, main header.header .arrow-right {
   position: absolute;
   top: 25%;
   left: 0;
@@ -165,31 +165,31 @@ main header.container .arrow-left, main header.container .arrow-right {
   cursor: pointer;
   z-index: 1;
 }
-main header.container .arrow-left {
+main header.header .arrow-left {
   margin-left: 2rem;
 }
-main header.container .arrow-right {
+main header.header .arrow-right {
   left: auto;
   right: 0;
   background: radial-gradient(transparent 0%, rgb(163, 163, 163) 200%);
   margin-right: 2rem;
 }
-main header.container .arrow-left:hover, main header.container .arrow-right:hover {
+main header.header .arrow-left:hover, main header.header .arrow-right:hover {
   opacity: 1;
 }
-main header.container nav.gallery-wrapper {
+main header.header nav.gallery-wrapper {
   width: 70%;
   height: 100%;
   overflow-x: auto; /* faz o scroll lateral ser no elemento, não no body todo da página. Se ele for maior do que o elemento-pai (container), haverá scroll */
 }
-main header.container nav.gallery-wrapper ul {
+main header.header nav.gallery-wrapper ul {
   width: 100%;
   display: flex;
   flex-flow: row nowrap; /* flexdirection + flex-wrap */
   align-items: stretch;
   gap: 1rem;
 }
-main header.container nav.gallery-wrapper ul li.item {
+main header.header nav.gallery-wrapper ul li.item {
   width: 9rem;
   display: flex;
   flex-direction: column;
@@ -202,27 +202,27 @@ main header.container nav.gallery-wrapper ul li.item {
   transition: all 500ms ease-in-out;
   list-style-type: none;
 }
-main header.container nav.gallery-wrapper ul li.item img.profile-img {
+main header.header nav.gallery-wrapper ul li.item img.profile-img {
   width: 5rem;
   margin: 0 auto;
 }
-main header.container nav.gallery-wrapper ul li.item p.profile-name {
+main header.header nav.gallery-wrapper ul li.item p.profile-name {
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
 }
-main header.container nav.gallery-wrapper ul li.item p.male-protagonist, main header.container nav.gallery-wrapper ul li.item p.female-protagonist {
+main header.header nav.gallery-wrapper ul li.item p.male-protagonist, main header.header nav.gallery-wrapper ul li.item p.female-protagonist {
   margin-top: -0.3rem;
 }
-main header.container nav.gallery-wrapper ul li.item p.male-protagonist::after {
+main header.header nav.gallery-wrapper ul li.item p.male-protagonist::after {
   content: "♂";
   font-size: 1.3rem;
 }
-main header.container nav.gallery-wrapper ul li.item p.female-protagonist::after {
+main header.header nav.gallery-wrapper ul li.item p.female-protagonist::after {
   content: "♀";
   font-size: 1.3rem;
 }
-main header.container nav.gallery-wrapper ul li.current-item { /* O item que estiver selecionado */
+main header.header nav.gallery-wrapper ul li.current-item { /* O item que estiver selecionado */
   opacity: 1;
 }
 main article {
@@ -309,12 +309,13 @@ body#persona5 header nav ul {
 }
 body#persona5 header nav ul li.item {
   filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.6));
-  width: 10rem;
+  width: 11rem;
   position: relative;
 }
 body#persona5 header nav ul li.item p.profile-name {
   color: #050505;
   position: relative;
+  min-width: fit-content;
   width: 68px;
   height: 21.85px;
   background: #FFFFFF;
@@ -336,6 +337,59 @@ body#persona5 table col.cinfo {
 }
 body#persona5 table th {
   color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  div.container {
+    max-width: 940px;
+    max-height: fit-content;
+    margin: 2rem auto;
+  }
+  div.container aside.side-menu {
+    min-width: 150px;
+  }
+  div.container main {
+    max-width: calc(100% - 150px);
+  }
+  div.container article#home-article p {
+    font-size: 1.5rem !important;
+  }
+  body#persona3 header.header, body#persona4 header.header, body#persona5 header.header {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  body#persona3 header.header nav.gallery-wrapper, body#persona4 header.header nav.gallery-wrapper, body#persona5 header.header nav.gallery-wrapper {
+    width: 90%;
+  }
+  body#persona3 article, body#persona4 article, body#persona5 article {
+    max-width: 874px;
+  }
+  body#persona3 section.text p, body#persona4 section.text p, body#persona5 section.text p {
+    font-size: 1.2rem;
+  }
+  body#persona3 section.data img, body#persona4 section.data img, body#persona5 section.data img {
+    max-width: 250px;
+    max-height: 400px;
+  }
+  #persona4 #kuma-data img {
+    height: 200px;
+  }
+  #persona5 li.item {
+    max-width: 10rem;
+  }
+  #persona5 li.item p.profile-name {
+    width: 9rem !important;
+    min-height: 2.5rem;
+  }
+  #persona5 li.item span.name-box {
+    min-width: 160px;
+    min-height: 3.2rem;
+    top: 65% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

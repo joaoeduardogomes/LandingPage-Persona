@@ -1,0 +1,92 @@
+@media screen and (min-width: 1024px) {
+    $width-sidebar: 150px;
+    
+    // GERAL:
+    html {
+        font-size: 16px;
+    }
+
+    div.container {
+        max-width: 940px;
+        max-height: fit-content;
+        margin: 2rem auto;
+
+        aside.side-menu {
+            min-width: $width-sidebar;
+        }
+
+        main {
+            max-width: calc(100% - $width-sidebar);
+        }
+
+        article#home-article {
+
+            p {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+
+    // PÁGINAS
+    body#persona3, body#persona4, body#persona5 {
+
+        header.header {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+
+            nav.gallery-wrapper {
+                width: 90%;
+            }
+        }
+
+        article {
+            max-width: calc(1024px - $width-sidebar);
+        }
+
+        section.text {
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        section.data {
+
+            img {
+                max-width: 250px;
+                max-height: 400px;
+            }
+        }
+    }
+
+    // Corrigir só a altura das img do Kuma:
+    #persona4 {
+
+        #kuma-data {
+
+            img {
+                height: 200px;
+            }
+        }
+    }
+
+    #persona5 {
+
+        li.item {
+            max-width: 10rem;
+
+            p.profile-name {
+                    width: 9rem !important;
+                    min-height: 2.5rem;
+            }
+            
+            span.name-box {
+                min-width: 160px;
+                min-height: 3.2rem;
+                top: 65% !important;
+            }
+        }
+        
+    }
+}
