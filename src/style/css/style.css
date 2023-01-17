@@ -333,6 +333,10 @@ body#persona5 header nav ul li.item span.name-box {
   z-index: -1;
   top: 62%;
 }
+body#persona5 section.data {
+  flex-direction: column;
+  gap: 1rem;
+}
 body#persona5 table col.cinfo {
   background-color: #D92323;
 }
@@ -403,17 +407,20 @@ body#persona5 span.toggle figure {
   #persona4 #kuma-data img {
     height: 200px;
   }
-  #persona5 li.item {
+  body#persona5 li.item {
     max-width: 10rem;
   }
-  #persona5 li.item p.profile-name {
+  body#persona5 li.item p.profile-name {
     width: 9rem !important;
     min-height: 2.5rem;
   }
-  #persona5 li.item span.name-box {
+  body#persona5 li.item span.name-box {
     min-width: 160px;
     min-height: 3.2rem;
     top: 65% !important;
+  }
+  body#persona5 section.data {
+    flex-direction: row;
   }
 }
 

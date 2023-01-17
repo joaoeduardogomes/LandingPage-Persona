@@ -71,7 +71,7 @@
         }
     }
 
-    #persona5 {
+    body#persona5 {
 
         li.item {
             max-width: 10rem;
@@ -86,6 +86,10 @@
                 min-height: 3.2rem;
                 top: 65% !important;
             }
+        }
+
+        section.data {
+            flex-direction: row;
         }
         
     }
