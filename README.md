@@ -1,3 +1,6 @@
+### Project language: 🇺🇸
+
+---
 
 # LandingPage-Persona
 A simple landing page with data profiles of Persona 3, 4, and 5 characters.
