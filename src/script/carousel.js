@@ -48,11 +48,12 @@ controls.forEach(control => {
         const isLeft = control.classList.contains('arrow-left'); 
 
         // como somos informados de qual seta foi clicada:
+            // e usamos "--var" e "++var" pra funcionar com o clique direto no personagem.
         if (isLeft) {
-            currentItem -= 1;
+            --currentItem;
         }
         else {
-            currentItem += 1;
+            ++currentItem;
         }
 
         // Manter o índice dentro da nossa quantidade de elementos na lista:
@@ -90,7 +91,7 @@ controls.forEach(control => {
 
 // Pegando por clique:
 //console.log(items);
-/*
+
 items.forEach(item => {
     item.addEventListener('click', () => {
 
@@ -99,9 +100,10 @@ items.forEach(item => {
         item.classList.add('current-item');
         positionItem(items);
 
-        console.log(`O índice é: ${item.dataset.indexValue}`);
-        console.log(`Selecionado: ${item.id}`)
-        console.log(`O current item é: ${currentItem}`)
+        hideData();
+        // Mostrar informações do personagem selecionado:
+        if(items[currentItem].classList.contains('current-item')) {
+            showData();
+        }
     })
 })
-*/
