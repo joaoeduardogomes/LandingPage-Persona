@@ -346,6 +346,7 @@ body#persona5 table th {
 body#persona5 span.toggle {
   cursor: pointer;
   padding: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 body#persona5 span.toggle:hover {
   box-shadow: 2px 3px 6px 5px rgba(0, 0, 0, 0.377);

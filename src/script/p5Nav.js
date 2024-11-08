@@ -1,79 +1,39 @@
-//  HOVER JOKER:
-const protagonist5Profile = document.getElementById('p5Protagonist-profile');
-const protagonist5ProfileImg = document.querySelector('#p5Protagonist-profile > .profile-img');
-protagonist5Profile.addEventListener('mouseover', function() {
-    protagonist5ProfileImg.src = "../img/avatars/p5-joker2.png";
-});
-protagonist5Profile.addEventListener('mouseout', function() {
-    protagonist5ProfileImg.src = "../img/avatars/p5-joker1.png";
-});
+let currentSelectedProfile = null;
 
-// HOVER SKULL:
-const ryujiProfile = document.getElementById('ryuji-profile');
-const ryujiProfileImg = document.querySelector('#ryuji-profile > .profile-img');
-ryujiProfile.addEventListener('mouseover', function() {
-    ryujiProfileImg.src = "../img/avatars/p5-ryuji2.png";
-});
-ryujiProfile.addEventListener('mouseout', function() {
-    ryujiProfileImg.src = "../img/avatars/p5-ryuji1.png";
-});
+function selectProfile(profile, selectedImg, defaultImg) {
+    profile.addEventListener('click', function() {
+        // If another profile is selected, reset it
+        if (currentSelectedProfile && currentSelectedProfile !== profile) {
+            currentSelectedProfile.querySelector('.profile-img').src = currentSelectedProfile.defaultImg;
+            currentSelectedProfile.classList.remove('selected');
+        }
 
-// HOVER PANTHER:
-const annProfile = document.getElementById('ann-profile');
-const annProfileImg = document.querySelector('#ann-profile > .profile-img');
-annProfile.addEventListener('mouseover', function() {
-    annProfileImg.src = "../img/avatars/p5-ann2.png";
-});
-annProfile.addEventListener('mouseout', function() {
-    annProfileImg.src = "../img/avatars/p5-ann1.png";
-});
+        // Toggle the selected state for the clicked profile
+        const isSelected = profile.classList.toggle('selected');
 
-// HOVER FOX:
-const yusukeProfile = document.getElementById('yusuke-profile');
-const yusukeProfileImg = document.querySelector('#yusuke-profile > .profile-img');
-yusukeProfile.addEventListener('mouseover', function() {
-    yusukeProfileImg.src = "../img/avatars/p5-yuusuke2.png";
-});
-yusukeProfile.addEventListener('mouseout', function() {
-    yusukeProfileImg.src = "../img/avatars/p5-yuusuke1.png";
-});
+        // Set the image based on the selection
+        profile.querySelector('.profile-img').src = isSelected ? selectedImg : defaultImg;
 
-// HOVER QUEEN:
-const makotoProfile = document.getElementById('makoto-profile');
-const makotoProfileImg = document.querySelector('#makoto-profile > .profile-img');
-makotoProfile.addEventListener('mouseover', function() {
-    makotoProfileImg.src = "../img/avatars/p5-makoto2.png";
-});
-makotoProfile.addEventListener('mouseout', function() {
-    makotoProfileImg.src = "../img/avatars/p5-makoto1.png";
-});
+        // Update the current selected profile if selected, or set it to null if deselected
+        currentSelectedProfile = isSelected ? profile : null;
+    });
+}
 
-// HOVER ORACLE:
-const futabaProfile = document.getElementById('futaba-profile');
-const futabaProfileImg = document.querySelector('#futaba-profile > .profile-img');
-futabaProfile.addEventListener('mouseover', function() {
-    futabaProfileImg.src = "../img/avatars/p5-futaba2.png";
-});
-futabaProfile.addEventListener('mouseout', function() {
-    futabaProfileImg.src = "../img/avatars/p5-futaba1.png";
-});
+document.getElementById('p5Protagonist-profile').defaultImg = "../img/avatars/p5-joker1.png";
+document.getElementById('ryuji-profile').defaultImg = "../img/avatars/p5-ryuji1.png";
+document.getElementById('ann-profile').defaultImg = "../img/avatars/p5-ann1.png";
+document.getElementById('yusuke-profile').defaultImg = "../img/avatars/p5-yuusuke1.png";
+document.getElementById('makoto-profile').defaultImg = "../img/avatars/p5-makoto1.png";
+document.getElementById('futaba-profile').defaultImg = "../img/avatars/p5-futaba1.png";
+document.getElementById('haru-profile').defaultImg = "../img/avatars/p5-haru1.png";
+document.getElementById('goro-profile').defaultImg = "../img/avatars/p5-akechi1.png";
 
-// HOVER NOIR:
-const haruProfile = document.getElementById('haru-profile');
-const haruProfileImg = document.querySelector('#haru-profile > .profile-img');
-haruProfile.addEventListener('mouseover', function() {
-    haruProfileImg.src = "../img/avatars/p5-haru2.png";
-});
-haruProfile.addEventListener('mouseout', function() {
-    haruProfileImg.src = "../img/avatars/p5-haru1.png";
-});
 
-// HOVER CROW:
-const akechiProfile = document.getElementById('goro-profile');
-const akechiProfileImg = document.querySelector('#goro-profile > .profile-img');
-akechiProfile.addEventListener('mouseover', function() {
-    akechiProfileImg.src = "../img/avatars/p5-akechi2.png";
-});
-akechiProfile.addEventListener('mouseout', function() {
-    akechiProfileImg.src = "../img/avatars/p5-akechi1.png";
-});
+selectProfile(document.getElementById('p5Protagonist-profile'), "../img/avatars/p5-joker2.png", "../img/avatars/p5-joker1.png");
+selectProfile(document.getElementById('ryuji-profile'), "../img/avatars/p5-ryuji2.png", "../img/avatars/p5-ryuji1.png");
+selectProfile(document.getElementById('ann-profile'), "../img/avatars/p5-ann2.png", "../img/avatars/p5-ann1.png");
+selectProfile(document.getElementById('yusuke-profile'), "../img/avatars/p5-yuusuke2.png", "../img/avatars/p5-yuusuke1.png");
+selectProfile(document.getElementById('makoto-profile'), "../img/avatars/p5-makoto2.png", "../img/avatars/p5-makoto1.png");
+selectProfile(document.getElementById('futaba-profile'), "../img/avatars/p5-futaba2.png", "../img/avatars/p5-futaba1.png");
+selectProfile(document.getElementById('haru-profile'), "../img/avatars/p5-haru2.png", "../img/avatars/p5-haru1.png");
+selectProfile(document.getElementById('goro-profile'), "../img/avatars/p5-akechi2.png", "../img/avatars/p5-akechi1.png");
